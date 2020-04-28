@@ -36,7 +36,7 @@
 #include "rcutils/strerror.h"
 #include "tf2/time.h"
 
-std::string tf2::displayTimePoint(const tf2::TimePoint& stamp)
+std::string tf2::displayTimePoint(const tf2::TimePoint & stamp)
 {
   const char * format_str = "%.6f";
   double current_time = tf2::timeToSec(stamp);

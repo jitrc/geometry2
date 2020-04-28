@@ -29,20 +29,16 @@
 
 /** \author Tully Foote */
 
-#ifndef TF2_TRANSFORM_STORAGE_H
-#define TF2_TRANSFORM_STORAGE_H
+#ifndef TF2__TRANSFORM_STORAGE_H_
+#define TF2__TRANSFORM_STORAGE_H_
 
-#include <tf2/LinearMath/Vector3.h>
-#include <tf2/LinearMath/Quaternion.h>
-
+#include "tf2/LinearMath/Vector3.h"
+#include "tf2/LinearMath/Quaternion.h"
 #include "tf2/time.h"
-#include <tf2/visibility_control.h>
+#include "tf2/visibility_control.h"
 
 namespace tf2
 {
-
-
-
 typedef uint32_t CompactFrameID;
 
 /** \brief Storage for transforms and their parent */
@@ -52,17 +48,18 @@ public:
   TF2_PUBLIC
   TransformStorage();
   TF2_PUBLIC
-  TransformStorage(const TimePoint& stamp, const Quaternion& q, const Vector3& t, CompactFrameID frame_id,
-                   CompactFrameID child_frame_id);
+  TransformStorage(
+    const TimePoint & stamp, const Quaternion & q, const Vector3 & t, CompactFrameID frame_id,
+    CompactFrameID child_frame_id);
 
   TF2_PUBLIC
-  TransformStorage(const TransformStorage& rhs)
+  TransformStorage(const TransformStorage & rhs)
   {
     *this = rhs;
   }
 
   TF2_PUBLIC
-  TransformStorage& operator=(const TransformStorage& rhs)
+  TransformStorage & operator=(const TransformStorage & rhs)
   {
 #if 01
     rotation_ = rhs.rotation_;
@@ -80,7 +77,5 @@ public:
   CompactFrameID frame_id_;
   CompactFrameID child_frame_id_;
 };
-
-}
-
-#endif // TF2_TRANSFORM_STORAGE_H
+}  // namespace tf2
+#endif  // TF2__TRANSFORM_STORAGE_H_

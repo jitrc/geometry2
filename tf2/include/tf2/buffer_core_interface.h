@@ -33,10 +33,10 @@
 #include <string>
 #include <vector>
 
-#include <geometry_msgs/msg/transform_stamped.hpp>
+#include "geometry_msgs/msg/transform_stamped.hpp"
 
-#include <tf2/time.h>
-#include <tf2/visibility_control.h>
+#include "tf2/time.h"
+#include "tf2/visibility_control.h"
 
 namespace tf2
 {
@@ -67,9 +67,9 @@ public:
   TF2_PUBLIC
   virtual geometry_msgs::msg::TransformStamped
   lookupTransform(
-    const std::string& target_frame,
-    const std::string& source_frame,
-    const tf2::TimePoint& time) const = 0;
+    const std::string & target_frame,
+    const std::string & source_frame,
+    const tf2::TimePoint & time) const = 0;
 
   /**
    * \brief Get the transform between two frames by frame ID assuming fixed frame.
@@ -84,11 +84,11 @@ public:
   TF2_PUBLIC
   virtual geometry_msgs::msg::TransformStamped
   lookupTransform(
-    const std::string& target_frame,
-    const tf2::TimePoint& target_time,
-    const std::string& source_frame,
-    const tf2::TimePoint& source_time,
-    const std::string& fixed_frame) const = 0;
+    const std::string & target_frame,
+    const tf2::TimePoint & target_time,
+    const std::string & source_frame,
+    const tf2::TimePoint & source_time,
+    const std::string & fixed_frame) const = 0;
 
   /**
    * \brief Test if a transform is possible.
@@ -102,10 +102,10 @@ public:
   TF2_PUBLIC
   virtual bool
   canTransform(
-    const std::string& target_frame,
-    const std::string& source_frame,
-    const tf2::TimePoint& time,
-    std::string* error_msg) const = 0;
+    const std::string & target_frame,
+    const std::string & source_frame,
+    const tf2::TimePoint & time,
+    std::string * error_msg) const = 0;
 
   /**
    * \brief Test if a transform is possible.
@@ -121,21 +121,22 @@ public:
   TF2_PUBLIC
   virtual bool
   canTransform(
-    const std::string& target_frame,
-    const tf2::TimePoint& target_time,
-    const std::string& source_frame,
-    const tf2::TimePoint& source_time,
-    const std::string& fixed_frame,
-    std::string* error_msg) const = 0;
+    const std::string & target_frame,
+    const tf2::TimePoint & target_time,
+    const std::string & source_frame,
+    const tf2::TimePoint & source_time,
+    const std::string & fixed_frame,
+    std::string * error_msg) const = 0;
 
   /**
    * \brief Get all frames that exist in the system.
+   * \return all frame names in a vector.
    */
   TF2_PUBLIC
   virtual std::vector<std::string>
   getAllFrameNames() const = 0;
-};  // class BufferCoreInterface
+};   // class BufferCoreInterface
 
 }  // namespace tf2
 
-#endif // TF2__BUFFER_CORE_INTERFACE_H_
+#endif  // TF2__BUFFER_CORE_INTERFACE_H_
