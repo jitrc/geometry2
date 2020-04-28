@@ -30,6 +30,7 @@
 #ifndef TF2__TIME_CACHE_H_
 #define TF2__TIME_CACHE_H_
 
+#include <chrono>
 #include <memory>
 #include <list>
 #include <sstream>

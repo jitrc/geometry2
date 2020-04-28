@@ -105,12 +105,12 @@ public:
   /**@brief Return the basis matrix for the rotation */
   TF2SIMD_FORCE_INLINE Matrix3x3 & getBasis() {return m_basis;}
   /**@brief Return the basis matrix for the rotation */
-  TF2SIMD_FORCE_INLINE const Matrix3x3 & getBasis()    const {return m_basis;}
+  TF2SIMD_FORCE_INLINE const Matrix3x3 & getBasis() const {return m_basis;}
 
   /**@brief Return the origin vector translation */
   TF2SIMD_FORCE_INLINE Vector3 & getOrigin() {return m_origin;}
   /**@brief Return the origin vector translation */
-  TF2SIMD_FORCE_INLINE const Vector3 & getOrigin()   const {return m_origin;}
+  TF2SIMD_FORCE_INLINE const Vector3 & getOrigin() const {return m_origin;}
 
   /**@brief Return a quaternion representing the rotation */
   TF2_PUBLIC
@@ -208,19 +208,19 @@ public:
   }
 
   TF2_PUBLIC
-  void    serialize(struct        TransformData & dataOut) const;
+  void serialize(struct TransformData & dataOut) const;
 
   TF2_PUBLIC
-  void    serializeFloat(struct   TransformFloatData & dataOut) const;
+  void serializeFloat(struct TransformFloatData & dataOut) const;
 
   TF2_PUBLIC
-  void    deSerialize(const struct        TransformData & dataIn);
+  void deSerialize(const struct TransformData & dataIn);
 
   TF2_PUBLIC
-  void    deSerializeDouble(const struct  TransformDoubleData & dataIn);
+  void deSerializeDouble(const struct TransformDoubleData & dataIn);
 
   TF2_PUBLIC
-  void    deSerializeFloat(const struct   TransformFloatData & dataIn);
+  void deSerializeFloat(const struct TransformFloatData & dataIn);
 };
 
 TF2SIMD_FORCE_INLINE Vector3

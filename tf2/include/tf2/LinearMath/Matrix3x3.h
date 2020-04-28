@@ -39,18 +39,10 @@ public:
   TF2_PUBLIC
   Matrix3x3() {}
 
-  // explicit Matrix3x3(const tf2Scalar *m) { setFromOpenGLSubMatrix(m); }
-
   /**@brief Constructor from Quaternion */
   TF2_PUBLIC
   explicit Matrix3x3(const Quaternion & q) {setRotation(q);}
-  /*
-  template <typename tf2Scalar>
-  Matrix3x3(const tf2Scalar& yaw, const tf2Scalar& pitch, const tf2Scalar& roll)
-  {
-  setEulerYPR(yaw, pitch, roll);
-  }
-  */
+
   /** @brief Constructor with row major formatting */
   TF2_PUBLIC
   Matrix3x3(
@@ -411,7 +403,6 @@ public:
   {
     return m_el[0].z() * v.x() + m_el[1].z() * v.y() + m_el[2].z() * v.z();
   }
-
 
   /**@brief diagonalizes this matrix by the Jacobi method.
   * @param rot stores the rotation from the coordinate system in which the matrix is diagonal to the original

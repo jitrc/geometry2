@@ -34,8 +34,6 @@ public:
   TF2_PUBLIC
   Quaternion() {}
 
-  // template <typename tf2Scalar>
-  // explicit Quaternion(const tf2Scalar *v) : Tuple4<tf2Scalar>(v) {}
   /**@brief Constructor from scalars */
   TF2_PUBLIC
   Quaternion(const tf2Scalar & x, const tf2Scalar & y, const tf2Scalar & z, const tf2Scalar & w)
@@ -223,7 +221,8 @@ public:
     return tf2Acos(dot(q) / s);
   }
   /**@brief Return the angle between this quaternion and the other along the shortest path
-  * @param q The other quaternion */
+   * @param q The other quaternion
+   */
   TF2_PUBLIC
   tf2Scalar angleShortestPath(const Quaternion & q) const
   {

@@ -47,7 +47,7 @@ namespace tf2
 {
 
 // Tolerance for acceptable quaternion normalization
-static double QUATERNION_NORMALIZATION_TOLERANCE = 10e-3;
+constexpr static double QUATERNION_NORMALIZATION_TOLERANCE = 10e-3;
 
 /** \brief convert Transform msg to Transform */
 void transformMsgToTF2(const geometry_msgs::msg::Transform & msg, tf2::Transform & tf2)
@@ -264,7 +264,7 @@ bool BufferCore::setTransformImpl(
   const std::string child_frame_id, const TimePoint stamp,
   const std::string & authority, bool is_static)
 {
-  // BACKEARDS COMPATABILITY
+  // BACKWARDS COMPATABILITY
   /* tf::StampedTransform tf_transform;
   tf::transformStampedMsgToTF(transform_in, tf_transform);
   if  (!old_tf_.setTransform(tf_transform, authority))

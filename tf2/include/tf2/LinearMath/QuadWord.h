@@ -80,8 +80,6 @@ public:
   /**@brief Return the w value */
   TF2SIMD_FORCE_INLINE const tf2Scalar & w() const {return m_floats[3];}
 
-  // TF2SIMD_FORCE_INLINE tf2Scalar&       operator[](int i)       { return (&m_floats[0])[i]; }
-  // TF2SIMD_FORCE_INLINE const tf2Scalar& operator[](int i) const { return (&m_floats[0])[i]; }
   // operator tf2Scalar*() replaces operator[], using implicit conversion.
   // We added operator != and operator == to avoid pointer comparisons.
   TF2SIMD_FORCE_INLINE operator tf2Scalar *() {return &m_floats[0];}
