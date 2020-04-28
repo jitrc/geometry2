@@ -45,6 +45,11 @@ if(BUILD_TESTING)
     ament_cmake_cppcheck
     ament_cmake_uncrustify
   )
+
+  list(APPEND AMENT_LINT_AUTO_EXCLUDE
+    # TODO(anyone): review include/tf2/LinearMath copyright
+    ament_cmake_copyright
+  )
   ament_lint_auto_find_test_dependencies()
 
   ament_cppcheck(LANGUAGE "c++")
