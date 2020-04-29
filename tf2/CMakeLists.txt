@@ -86,7 +86,7 @@ if(BUILD_TESTING)
   endif()
 
   ament_add_gtest(test_time test/test_time.cpp)
-  if (TARGET test_time)
+  if(TARGET test_time)
     target_link_libraries(test_time tf2)
   endif()
 

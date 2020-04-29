@@ -29,13 +29,9 @@
 #ifndef TF2__TIME_H_
 #define TF2__TIME_H_
 
-#include <stdio.h>
-
 #include <chrono>
 #include <cmath>
 #include <string>
-#include <thread>
-#include <iostream>
 
 #include "tf2/visibility_control.h"
 
