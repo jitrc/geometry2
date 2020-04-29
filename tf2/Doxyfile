@@ -2,7 +2,9 @@
 
 PROJECT_NAME           = "tf2"
 PROJECT_NUMBER         = master
-PROJECT_BRIEF          = "tf2 maintains the relationship between coordinate frames in a tree structure buffered in time, and lets the user transform points, vectors, etc between any two coordinate frames at any desired point in time."
+PROJECT_BRIEF          = "tf2 maintains the relationship between coordinate frames in a tree \
+structure buffered in time, and lets the user transform points, vectors, etc between any two \
+coordinate frames at any desired point in time."
 
 INPUT                  = ./include mainpage.dox
 RECURSIVE              = YES
@@ -22,3 +24,4 @@ PREDEFINED             += TF2_PUBLIC=
 TAGFILES += "../../../../doxygen_tag_files/cppreference-doxygen-web.tag.xml=http://en.cppreference.com/w/"
 # Consider changing "latest" to the version you want to reference (e.g. beta1 or 1.0.0)
 TAGFILES += "../../../../doxygen_tag_files/rcutils.tag=http://docs.ros2.org/latest/api/rcutils/"
+GENERATE_TAGFILE = "../../../../doxygen_tag_files/tf2.tag"
