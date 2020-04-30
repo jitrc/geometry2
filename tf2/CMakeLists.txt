@@ -53,7 +53,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 
   ament_cppcheck(LANGUAGE "c++")
-  ament_uncrustify(LANGUAGE "C++")
+  ament_uncrustify(LANGUAGE "C++" --exclude LinearMath)
 
   find_package(ament_cmake_gtest)
 
